@@ -69,9 +69,13 @@ public class AdministrationActivity extends AppCompatActivity {
                             cv.put("numero", elemento.getNumero());
                             cv.put("estado", elemento.getEstado().toString());
 
-                            db.insert("Elementos", null, cv);
+                            long exito = db.insert("Elementos", null, cv);
+                            if (exito > 0) {
+                                Toast.makeText(this, "Elemento " + elemento.getNombre() + " insertado", Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(this, "Elemento " + elemento.getNombre() + " no pudo ser insertado", Toast.LENGTH_SHORT).show();
+                            }
                         });
-                        Toast.makeText(this, "Elemento " + elemento.getNombre() + " insertado", Toast.LENGTH_SHORT).show();
                     }
             } else {
                 Toast.makeText(this, "¡El nuevo elemento contiene datos erróneos!", Toast.LENGTH_SHORT).show();
@@ -95,11 +99,39 @@ public class AdministrationActivity extends AppCompatActivity {
                         cv.put("numero", elemento.getNumero());
                         cv.put("estado", elemento.getEstado().toString());
 
-                        db.update("Elementos", cv, "LOWER(nombre) = ?", new String[]{elemento.getNombre().toLowerCase()});
+                        int exito = db.update("Elementos", cv, "LOWER(nombre) = ?", new String[]{elemento.getNombre().toLowerCase()});
+                        if (exito == 1) {
+                            Toast.makeText(this, "Elemento " + elemento.getNombre() + " modificado", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(this, "El elemento " + elemento.getNombre() + " no pudo ser modificado", Toast.LENGTH_SHORT).show();
+                        }
                     });
-                    Toast.makeText(this, "Elemento " + elemento.getNombre() + " modificado", Toast.LENGTH_SHORT).show();
                 }
 
+            } else {
+                Toast.makeText(this, "¡El nuevo elemento contiene datos erróneos!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnBorrar.setOnClickListener(v -> {
+            String nombreElem = etNombre.getText().toString();
+            if (nombreElem != null && !nombreElem.isEmpty()) {
+                List<Elemento> elementos = getPorNombre(nombreElem);
+
+                if (elementos.size() != 1) {
+                    DialogoNoInsertar dialogo = new DialogoNoInsertar();
+                    dialogo.show(fragmentManager, "NO SE PUDO BORRAR");
+                } else {
+                    operarBD(db -> {
+                        int exito = db.delete("Elementos", "LOWER(nombre) = ?", new String[]{nombreElem.toLowerCase()});
+
+                        if (exito == 1) {
+                            Toast.makeText(this, "Elemento " + nombreElem + " borrado", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(this, "El elemento " + nombreElem + " no pudo ser borrado", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
             } else {
                 Toast.makeText(this, "¡El nuevo elemento contiene datos erróneos!", Toast.LENGTH_SHORT).show();
             }
@@ -117,7 +149,6 @@ public class AdministrationActivity extends AppCompatActivity {
 
             if (elem.getNombre() != null && !elem.getNombre().trim().isEmpty()) {
                 return elem;
-            } else {
             }
         } catch (Exception e) {
             e.printStackTrace();

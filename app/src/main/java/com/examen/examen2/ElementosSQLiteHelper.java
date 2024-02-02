@@ -15,10 +15,10 @@ public class ElementosSQLiteHelper extends SQLiteOpenHelper {
 
     private static final String SQL_CREATE_ELEMENTOS =
             "CREATE TABLE Elementos (id INTEGER PRIMARY KEY NOT NULL," +
-                    " nombre TEXT, " +
-                    " simbolo TEXT, " +
-                    " numero INTEGER, " +
-                    "estado TEXT)";
+                    " nombre TEXT NOT NULL, " +
+                    " simbolo TEXT NOT NULL, " +
+                    " numero INTEGER  NOT NULL, " +
+                    "estado TEXT  NOT NULL)";
 
     private static final String SQL_INSERT_ELEMENTOS =
             "INSERT INTO Elementos (nombre, simbolo, numero, estado) " +

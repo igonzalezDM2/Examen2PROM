@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
                 Intent intent = new Intent(this, AdministrationActivity.class);
                 startActivity(intent);
             } else {
-                Toast.makeText(this, "Acceso incorrecto", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.accesoincorrecto, Toast.LENGTH_SHORT).show();
                 ivError.setVisibility(ImageView.VISIBLE);
             }
 

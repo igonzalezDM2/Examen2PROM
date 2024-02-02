@@ -10,5 +10,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textAlignment="center"
-        android:text="EL ELEMENTO YA EXISTE"/>
+        android:text="@string/ya_existe"/>
 </LinearLayout>

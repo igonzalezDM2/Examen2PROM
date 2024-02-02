@@ -10,5 +10,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textAlignment="center"
-        android:text="EL ELEMENTO NO EXISTE"/>
+        android:text="@string/no_existe"/>
 </LinearLayout>

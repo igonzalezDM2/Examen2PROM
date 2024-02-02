@@ -1,3 +1,41 @@
 <resources>
     <string name="app_name">QUIMICANDO</string>
+    <string name="consultar">CONSULTAR</string>
+    <string name="quimico">QUÍMICO</string>
+    <string name="num_consultas">Num. consultas:</string>
+    <string name="salir">SALIR</string>
+    <string name="volver">VOLVER</string>
+    <string name="despedida">AGUR</string>
+    <string name="usuario">Usuario</string>
+    <string name="contra">Contraseña</string>
+    <string name="login">LOGIN</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="buscar">BUSCAR</string>
+    <string name="insertar">INSERTAR</string>
+    <string name="modificar">MODIFICAR</string>
+    <string name="borrar">BORRAR</string>
+    <string name="elemento">ELEMENTO</string>
+    <string name="elemento2">Elemento </string>
+    <string name="nombre">NOMBRE</string>
+    <string name="simbolo">Símbolo</string>
+    <string name="numero">Número</string>
+    <string name="estado">Estado</string>
+    <string name="ya_existe">EL ELEMENTO YA EXISTE</string>
+    <string name="no_existe">EL ELEMENTO NO EXISTE</string>
+    <string name="no_resultados">NO HAY RESULTADOS</string>
+    <string name="datos_erroneos">¡El nuevo elemento contiene datos erróneos!"</string>
+    <string name="no_insertar">NO SE PUDO INSERTAR</string>
+    <string name="no_modificar">NO SE PUDO MODIFICAR</string>
+    <string name="no_borrar">NO SE PUDO BORRAR</string>
+    <string name="insertado"> insertado</string>
+    <string name="nopudoinsertado"> no pudo ser insertado</string>
+    <string name="modificado"> modificado</string>
+    <string name="nopudomodificado"> no pudo ser modificado</string>
+    <string name="borrado"> borrado</string>
+    <string name="nopudoborrado"> no pudo ser borrado</string>
+    <string name="vale"> no pudo ser borrado</string>
+    <string name="accesoincorrecto">Acceso incorrecto</string>
+    <string name="sinresultados">SIN RESULTADOS</string>
+    <string name="limpiar">LIMPIAR</string>
+
 </resources>

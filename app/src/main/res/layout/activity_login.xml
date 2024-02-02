@@ -21,20 +21,20 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="USUARIO"
+            android:hint="@string/usuario"
             android:id="@+id/etUsuario"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:hint="Contraseña"
+            android:hint="@string/contra"
             android:id="@+id/etContra"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnLogin"
-            android:text="LOGIN"/>
+            android:text="@string/login"/>
     </LinearLayout>
 
     <Button
@@ -42,6 +42,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnCancelar"
         android:layout_alignParentBottom="true"
-        android:text="CANCELAR"/>
+        android:text="@string/cancelar"/>
 
 </RelativeLayout>

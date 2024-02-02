@@ -60,7 +60,7 @@ public class AdministrationActivity extends AppCompatActivity {
 
                     if (!elementos.isEmpty()) {
                         DialogoNoInsertar dialogo = new DialogoNoInsertar();
-                        dialogo.show(fragmentManager, "NO SE PUDO INSERTAR");
+                        dialogo.show(fragmentManager, getString(R.string.no_insertar));
                     } else {
                         operarBD(db -> {
                             ContentValues cv = new ContentValues();
@@ -71,14 +71,14 @@ public class AdministrationActivity extends AppCompatActivity {
 
                             long exito = db.insert("Elementos", null, cv);
                             if (exito > 0) {
-                                Toast.makeText(this, "Elemento " + elemento.getNombre() + " insertado", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(this, getString(R.string.elemento2) + elemento.getNombre() + getText(R.string.insertado), Toast.LENGTH_SHORT).show();
                             } else {
-                                Toast.makeText(this, "Elemento " + elemento.getNombre() + " no pudo ser insertado", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(this, getString(R.string.elemento2) + elemento.getNombre() + getText(R.string.nopudoinsertado), Toast.LENGTH_SHORT).show();
                             }
                         });
                     }
             } else {
-                Toast.makeText(this, "¡El nuevo elemento contiene datos erróneos!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.datos_erroneos, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -88,8 +88,8 @@ public class AdministrationActivity extends AppCompatActivity {
                 List<Elemento> elementos = getPorNombre(elemento.getNombre());
 
                 if (elementos.size() != 1) {
-                    DialogoNoInsertar dialogo = new DialogoNoInsertar();
-                    dialogo.show(fragmentManager, "NO SE PUDO MODIFICAR");
+                    DialogoNoModificar dialogo = new DialogoNoModificar();
+                    dialogo.show(fragmentManager, getString(R.string.no_modificar));
                 } else {
 
                     operarBD(db -> {
@@ -101,15 +101,15 @@ public class AdministrationActivity extends AppCompatActivity {
 
                         int exito = db.update("Elementos", cv, "LOWER(nombre) = ?", new String[]{elemento.getNombre().toLowerCase()});
                         if (exito == 1) {
-                            Toast.makeText(this, "Elemento " + elemento.getNombre() + " modificado", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(this, getText(R.string.elemento2) + elemento.getNombre() + getText(R.string.modificado), Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText(this, "El elemento " + elemento.getNombre() + " no pudo ser modificado", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(this, getText(R.string.elemento2) + elemento.getNombre() + getText(R.string.nopudomodificado), Toast.LENGTH_SHORT).show();
                         }
                     });
                 }
 
             } else {
-                Toast.makeText(this, "¡El nuevo elemento contiene datos erróneos!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.datos_erroneos, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -119,21 +119,21 @@ public class AdministrationActivity extends AppCompatActivity {
                 List<Elemento> elementos = getPorNombre(nombreElem);
 
                 if (elementos.size() != 1) {
-                    DialogoNoInsertar dialogo = new DialogoNoInsertar();
-                    dialogo.show(fragmentManager, "NO SE PUDO BORRAR");
+                    DialogoNoModificar dialogo = new DialogoNoModificar();
+                    dialogo.show(fragmentManager, getString(R.string.no_borrar));
                 } else {
                     operarBD(db -> {
                         int exito = db.delete("Elementos", "LOWER(nombre) = ?", new String[]{nombreElem.toLowerCase()});
 
                         if (exito == 1) {
-                            Toast.makeText(this, "Elemento " + nombreElem + " borrado", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(this, getText(R.string.elemento2) + nombreElem + getString(R.string.borrado), Toast.LENGTH_SHORT).show();
                         } else {
-                            Toast.makeText(this, "El elemento " + nombreElem + " no pudo ser borrado", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(this, getText(R.string.elemento2) + nombreElem + getString(R.string.nopudoborrado), Toast.LENGTH_SHORT).show();
                         }
                     });
                 }
             } else {
-                Toast.makeText(this, "¡El nuevo elemento contiene datos erróneos!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.datos_erroneos, Toast.LENGTH_SHORT).show();
             }
         });
 

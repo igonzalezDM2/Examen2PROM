@@ -22,7 +22,7 @@
             android:layout_marginTop="50sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Buscar"
+            android:text="@string/buscar"
             android:id="@+id/btnBuscar"/>
 
         <ListView
@@ -36,7 +36,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Volver"
+        android:text="@string/volver"
         android:id="@+id/btnVolver"
         android:layout_alignParentBottom="true"/>
 

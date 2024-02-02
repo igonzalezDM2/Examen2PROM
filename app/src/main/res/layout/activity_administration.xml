@@ -18,38 +18,38 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:textSize="40sp"
-            android:text="ELEMENTO"/>
+            android:text="@string/elemento"/>
 
         <EditText
             android:layout_width="300sp"
-            android:hint="NOMBRE"
+            android:hint="@string/nombre"
             android:layout_height="60sp"
             android:id="@+id/etNombre"/>
 
         <EditText
             android:layout_width="100sp"
-            android:hint="Símbolo"
+            android:hint="@string/simbolo"
             android:maxLength="2"
             android:layout_height="60sp"
             android:id="@+id/etSimbolo"/>
 
         <EditText
             android:layout_width="100sp"
-            android:hint="Número"
+            android:hint="@string/numero"
             android:inputType="number"
             android:layout_height="60sp"
             android:id="@+id/etNumero"/>
 
         <Spinner
             android:layout_width="200sp"
-            android:hint="ESTADO"
+            android:hint="@string/estado"
             android:id="@+id/spEstado"
             android:layout_height="100sp"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="INSERTAR"
+            android:text="@string/insertar"
             android:layout_marginTop="25sp"
             android:layout_marginBottom="25sp"
             android:id="@+id/btnInsertar"/>
@@ -57,13 +57,13 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="MODIFICAR"
+            android:text="@string/modificar"
             android:layout_marginBottom="25sp"
             android:id="@+id/btnModificar"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="BORRAR"
+            android:text="@string/borrar"
             android:id="@+id/btnBorrar"/>
 
     </LinearLayout>
@@ -72,7 +72,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="Volver"
+        android:text="@string/volver"
         android:id="@+id/btnVolver"/>
 
 </RelativeLayout>

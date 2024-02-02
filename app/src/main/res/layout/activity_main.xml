@@ -16,13 +16,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnConsultar"
-            android:text="CONSULTAR"/>
+            android:text="@string/consultar"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnLogin"
-            android:text="LOGIN"/>
+            android:text="QUÍMICO"/>
 
         <LinearLayout
             android:orientation="horizontal"
@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20sp"
-                android:text="Num. consultas:"/>
+                android:text="@string/num_consultas"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -49,6 +49,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:id="@+id/btnSalir"
-        android:text="SALIR"/>
+        android:text="@string/salir"/>
 
 </RelativeLayout>

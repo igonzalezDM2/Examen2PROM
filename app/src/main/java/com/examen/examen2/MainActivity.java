@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnSalir.setOnClickListener(v -> {
-            Toast.makeText(this, "Chao", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.despedida, Toast.LENGTH_SHORT).show();
             finish();
         });
 

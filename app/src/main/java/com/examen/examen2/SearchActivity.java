@@ -47,7 +47,7 @@ public class SearchActivity extends AppCompatActivity {
         lvElementos.setAdapter(adaptador);
 
         btnBuscar.setOnClickListener(v -> {
-            if (btnBuscar.getText().toString().equalsIgnoreCase("buscar")) {
+            if (btnBuscar.getText().toString().equalsIgnoreCase(getString(R.string.buscar))) {
                 veces++;
                 String strCampo = etBusqueda.getText().toString().toLowerCase();
                 if (strCampo != null && !strCampo.trim().isEmpty()) {
@@ -66,10 +66,10 @@ public class SearchActivity extends AppCompatActivity {
                         cur.close();
 
                         if (!elementos.isEmpty()) {
-                            btnBuscar.setText("Limpiar");
+                            btnBuscar.setText(getString(R.string.limpiar));
                         } else {
                             DialogoSinResultados dialogo = new DialogoSinResultados();
-                            dialogo.show(fragmentManager, "SIN RESULTADOS");
+                            dialogo.show(fragmentManager, getString(R.string.sinresultados));
                         }
 
                         listaElementos.clear();
@@ -77,11 +77,11 @@ public class SearchActivity extends AppCompatActivity {
                         adaptador.notifyDataSetChanged();
                     });
                 }
-            } else if (btnBuscar.getText().toString().equalsIgnoreCase("limpiar")) {
+            } else if (btnBuscar.getText().toString().equalsIgnoreCase(getString(R.string.limpiar))) {
                 etBusqueda.setText("");
                 listaElementos.clear();
                 adaptador.notifyDataSetChanged();
-                btnBuscar.setText("Buscar");
+                btnBuscar.setText(getString(R.string.buscar));
             }
         });
 

@@ -10,5 +10,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textAlignment="center"
-        android:text="NO HAY RESULTADOS"/>
+        android:text="@string/no_resultados"/>
 </LinearLayout>

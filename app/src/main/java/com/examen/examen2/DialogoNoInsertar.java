@@ -18,7 +18,7 @@ public class DialogoNoInsertar extends DialogFragment {
         LayoutInflater inflater = getActivity().getLayoutInflater();
         builder.setView(inflater.inflate(R.layout.dialogo_no_insertar, null));
 
-        Dialog dialogo =  builder.setPositiveButton("VALE", (dialog, which) -> {
+        Dialog dialogo =  builder.setPositiveButton(getString(R.string.vale), (dialog, which) -> {
             dialog.cancel();
         }).create();
         dialogo.setCancelable(false);

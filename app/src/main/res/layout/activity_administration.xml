@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdministrationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50sp"
+        android:layout_marginLeft="50sp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="40sp"
+            android:text="ELEMENTO"/>
+
+        <EditText
+            android:layout_width="300sp"
+            android:hint="NOMBRE"
+            android:layout_height="60sp"
+            android:id="@+id/etNombre"/>
+
+        <EditText
+            android:layout_width="100sp"
+            android:hint="Símbolo"
+            android:maxLength="2"
+            android:layout_height="60sp"
+            android:id="@+id/etSimbolo"/>
+
+        <EditText
+            android:layout_width="100sp"
+            android:hint="Número"
+            android:inputType="number"
+            android:layout_height="60sp"
+            android:id="@+id/etNumero"/>
+
+        <Spinner
+            android:layout_width="200sp"
+            android:hint="ESTADO"
+            android:id="@+id/spEstado"
+            android:layout_height="100sp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="INSERTAR"
+            android:layout_marginTop="25sp"
+            android:layout_marginBottom="25sp"
+            android:id="@+id/btnInsertar"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MODIFICAR"
+            android:layout_marginBottom="25sp"
+            android:id="@+id/btnModificar"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BORRAR"
+            android:id="@+id/btnBorrar"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Volver"
+        android:id="@+id/btnVolver"/>
+
+</RelativeLayout>

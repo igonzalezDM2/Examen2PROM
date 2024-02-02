@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_columnWeight="0.4"
+        android:textSize="30sp"
+        android:id="@+id/tvNombre"
+        android:layout_height="wrap_content"
+        android:text="Helio"/>
+    <TextView
+        android:layout_columnWeight="0.1"
+        android:textSize="30sp"
+        android:id="@+id/tvSimbolo"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:text="He"/>
+    <TextView
+        android:layout_columnWeight="0.1"
+        android:textSize="30sp"
+        android:id="@+id/tvNumero"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="10"/>
+    <TextView
+        android:layout_columnWeight="0.4"
+        android:textSize="30sp"
+        android:textAlignment="textEnd"
+        android:id="@+id/tvEstado"
+        android:layout_height="wrap_content"
+        android:text="SOLIDO"/>
+</GridLayout>

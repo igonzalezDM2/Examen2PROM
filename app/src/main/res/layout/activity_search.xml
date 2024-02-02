@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SearchActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_gravity="center"
+            android:layout_width="300sp"
+            android:id="@+id/etBusqueda"
+            android:layout_height="50sp"/>
+
+        <Button
+            android:layout_marginTop="50sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscar"
+            android:id="@+id/btnBuscar"/>
+
+        <ListView
+            android:layout_marginTop="20sp"
+            android:id="@+id/lvElementos"
+            android:layout_width="match_parent"
+            android:layout_height="400sp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volver"
+        android:id="@+id/btnVolver"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

@@ -4,51 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    tools:context=".LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <Button
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:visibility="invisible"
+            android:id="@+id/ivError"
+            android:src="@drawable/error"/>
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnConsultar"
-            android:text="CONSULTAR"/>
+            android:hint="USUARIO"
+            android:id="@+id/etUsuario"/>
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Contraseña"
+            android:id="@+id/etContra"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnLogin"
             android:text="LOGIN"/>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="20sp"
-                android:text="Num. consultas:"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tvNumConsultas"/>
-
-        </LinearLayout>
-
     </LinearLayout>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/btnCancelar"
         android:layout_alignParentBottom="true"
-        android:id="@+id/btnSalir"
-        android:text="SALIR"/>
+        android:text="CANCELAR"/>
 
 </RelativeLayout>
